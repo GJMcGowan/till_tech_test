@@ -23,7 +23,7 @@ describe Till do
 
   it 'can add things to the list' do
     subject.add("Blueberry Muffin", 1)
-    expect(subject.list).to eq({:"Blueberry Muffin" => 1})
+    expect(subject.list).to eq({:"Blueberry Muffin" => {1 => 4.05}})
   end
 
   it 'knows what items are allowed to be added' do

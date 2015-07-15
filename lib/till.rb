@@ -1,4 +1,3 @@
-
 class Till
   attr_reader :list
   attr_reader :allowed
@@ -26,6 +25,6 @@ class Till
 
   def add(item, quantity)
     raise "That is not on the menu" unless @allowed.has_key?(item)
-    @list[item.to_sym] = quantity
+    @list[item.to_sym] = {quantity => @allowed[item]}
   end
 end
